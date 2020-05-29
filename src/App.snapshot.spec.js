@@ -29,7 +29,7 @@ describe("App - enzyme - Reafactoring Tests", () => {
 describe("App - component-test-utils-react - Reafactoring Tests", () => {
   it("should look the same", () => {
     const component = shallow(<App />, {blackList: true});
-    expect(component.html()).toMatchSnapshot();
+    expect(component.html({snapshot: true})).toMatchSnapshot();
   });
 });
 
